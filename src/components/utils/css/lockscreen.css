@@ -1,0 +1,11 @@
+.lockscreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    height: calc(100% - 22px);
+}
+
+.lockscreen>div:last-child {
+    margin-top: auto;
+}

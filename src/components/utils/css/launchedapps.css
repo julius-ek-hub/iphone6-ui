@@ -1,0 +1,36 @@
+.close-app {
+    border: none;
+    padding: 0;
+    font-size: 1.1em;
+    padding-right: 4px;
+    background: transparent;
+}
+
+.app-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    overflow: hidden;
+    overflow-y: auto;
+    background: white;
+}
+
+.app-loading {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+.app-loading img {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+.app-loading div {
+    text-align: center;
+}

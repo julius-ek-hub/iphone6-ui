@@ -1,0 +1,69 @@
+.status-bar {
+    display: flex;
+    background: transparent;
+    padding: 0 4px 0 4px;
+    position: absolute;
+    width: inherit;
+}
+
+.status-bar div span {
+    font-size: small;
+}
+
+.status-bar .right {
+    margin-left: auto;
+}
+
+@keyframes batteryCharging {
+    0% {
+        content: "\f244";
+    }
+    25% {
+        content: "\f243";
+    }
+    50% {
+        content: "\f242";
+    }
+    75% {
+        content: "\f241";
+    }
+    100% {
+        content: "\f240";
+    }
+}
+
+@keyframes chargeBlink {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+.fa-battery-empty {
+    position: relative;
+}
+
+.fa-battery-charging::before {
+    content: "\f244";
+    animation-name: batteryCharging;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.fa-battery-empty::after {
+    content: "\f071";
+    font-size: 8px;
+    position: absolute;
+    left: 30%;
+    top: 24%;
+    transform: scale(0);
+    animation-name: chargeBlink;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}

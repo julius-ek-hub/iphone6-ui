@@ -1,0 +1,95 @@
+.device {
+    transition: var(--trans);
+    position: relative;
+    border: 10px solid var(--dark);
+    background: var(--dark);
+    border-radius: 20px;
+}
+
+.device .power-button {
+    position: absolute;
+    width: 10px;
+    height: 60px;
+    right: -15px;
+    background: var(--dark);
+    border-radius: 0 20px 20px 0;
+    top: 10%;
+    z-index: +1;
+    border: none;
+}
+
+.device .power-button:active {
+    right: -11.5px;
+    padding: 0;
+}
+
+.device>.top,
+.device>.bottom {
+    height: 40px;
+    background: var(--dark);
+    position: relative;
+}
+
+.device>.bottom {
+    height: 40px;
+    background: var(--dark);
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.device>.top::before {
+    width: 10px;
+    height: 10px;
+    background: var(--fadeWhite-a);
+    border-radius: 5px;
+    left: calc(50% - 50px);
+}
+
+.device>.top::after {
+    width: 70px;
+    height: 10px;
+    border: 1px solid var(--fadeWhite-a);
+    background: var(--darka);
+    border-radius: 5px;
+    left: calc(50% - 25px);
+}
+
+.device>.top::before,
+.device>.top::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+}
+
+.device>.bottom>button.home {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: var(--fadeWhite-a);
+    border-radius: 20px;
+    left: calc(50% - 25px);
+    border: none;
+    top: 3px;
+    transition: var(--trans);
+}
+
+.device>.bottom>button.home:active {
+    transform: scale(0.9);
+}
+
+.window {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    bottom: 40px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.window-child {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,21 @@
+/*
+* The Apps that have a fixed position at the bottom of the phone for easy acces.
+* The makeup is done already in icons.css, just a few private touches
+*/
+
+.important-apps {
+    position: absolute;
+    width: 100%;
+    background: rgb(248, 249, 250, 0.5);
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.important-apps .icon-container {
+    height: unset;
+}

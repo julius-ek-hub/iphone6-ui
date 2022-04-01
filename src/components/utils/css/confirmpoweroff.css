@@ -1,0 +1,73 @@
+.confirm-poweroff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.confirm-poweroff button {
+    border: none;
+    background: white;
+    font-size: 1.6em;
+    padding: 2px 15px 8px 15px;
+    border-radius: 40px;
+}
+
+.confirm-poweroff>div:first-child {
+    background: var(--fadeWhite);
+    border-radius: 40px;
+    width: 50%;
+    position: relative;
+    height: 53px;
+}
+
+.confirm-poweroff>div:first-child span {
+    position: absolute;
+    left: 55px;
+    top: 15px;
+}
+
+.confirm-poweroff>div:first-child button {
+    transition: var(--trans);
+    position: absolute;
+    top: 2px;
+    left: 4px;
+}
+
+.confirm-poweroff>div:last-child {
+    margin-top: calc(100% - 10px);
+    text-align: center;
+}
+
+@keyframes fade-for-power-off {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes slide-for-power-off {
+    from {
+        margin-left: 0%;
+    }
+    to {
+        margin-left: 68%;
+    }
+}
+
+.fade-for-power-off {
+    animation-name: fade-for-power-off;
+}
+
+.slide-for-power-off {
+    animation-name: slide-for-power-off;
+}
+
+.fade-for-power-off,
+.slide-for-power-off {
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}

@@ -1,0 +1,54 @@
+.history-window {
+    background: var(--darkb);
+    overflow: hidden;
+}
+
+.history-window>div {
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    text-align: center;
+    border-radius: 10px;
+    transition: var(--trans);
+}
+
+.history-window>div .cover-button,
+.history-window>div .close-particular-history-app {
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.history-window>div .close-particular-history-app {
+    top: 0;
+    height: 40px;
+    left: 0;
+    width: 100%;
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.clear-app-history {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border: none;
+    background: var(--fadeWhite);
+    color: var(--darkb);
+}
+
+.history-window>div>.window {
+    top: 0;
+    height: 100%;
+}
+
+.history-window>div>.window iframe {
+    overflow: hidden;
+    border-radius: 10px;
+}
